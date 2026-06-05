@@ -1,0 +1,5 @@
+region       = "us-east-1"
+cluster_name = "project-bedrock-cluster"
+vpc_name     = "project-bedrock-vpc"
+environment  = "production"
+student_id   = "ALT/SOE/025/3793"
