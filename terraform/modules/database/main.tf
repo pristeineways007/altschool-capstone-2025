@@ -75,7 +75,7 @@ resource "aws_db_instance" "postgresql" {
   allocated_storage = 20
 
   db_name  = "orders"
-  username = "admin"
+  username = "pgadmin"
   password = random_password.postgresql.result
 
   db_subnet_group_name   = aws_db_subnet_group.main.name
@@ -132,7 +132,7 @@ resource "aws_secretsmanager_secret" "postgresql" {
 resource "aws_secretsmanager_secret_version" "postgresql" {
   secret_id = aws_secretsmanager_secret.postgresql.id
   secret_string = jsonencode({
-    username = "admin"
+    username = "pgadmin"
     password = random_password.postgresql.result
     host     = aws_db_instance.postgresql.address
     port     = 5432

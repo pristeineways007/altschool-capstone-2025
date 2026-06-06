@@ -21,3 +21,8 @@ variable "environment" {
   type        = string
   default     = "production"
 }
+
+variable "student_id" {
+  description = "Student ID for unique bucket naming"
+  type        = string
+}
