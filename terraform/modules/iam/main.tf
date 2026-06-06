@@ -40,8 +40,3 @@ resource "aws_iam_user_login_profile" "dev_view" {
 resource "aws_iam_access_key" "dev_view" {
   user = aws_iam_user.dev_view.name
 }
-
-tags = {
-    Project     = "karatu-2025-capstone"
-    Environment = var.environment
-  }
