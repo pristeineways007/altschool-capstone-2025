@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalog-override
+  namespace: retail-app
+data:
+  RETAIL_CATALOG_PERSISTENCE_ENDPOINT: "{{ .Values.catalog.db.endpoint }}:3306"
+  RETAIL_CATALOG_PERSISTENCE_DB_NAME: "{{ .Values.catalog.db.name }}"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: orders-override
+  namespace: retail-app
+data:
+  RETAIL_ORDERS_PERSISTENCE_ENDPOINT: "{{ .Values.orders.db.endpoint }}:5432"
+  RETAIL_ORDERS_PERSISTENCE_NAME: "{{ .Values.orders.db.name }}"
