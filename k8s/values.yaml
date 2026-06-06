@@ -1,0 +1,16 @@
+catalog:
+  db:
+    endpoint: project-bedrock-mysql.c01yi06kwkdc.us-east-1.rds.amazonaws.com
+    name: catalog
+    user: admin
+
+orders:
+  db:
+    endpoint: project-bedrock-postgresql.c01yi06kwkdc.us-east-1.rds.amazonaws.com
+    name: orders
+    user: pgadmin
+
+carts:
+  dynamodb:
+    tableName: project-bedrock-cart
+    region: us-east-1
